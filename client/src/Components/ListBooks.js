@@ -1,33 +1,23 @@
-import { render } from '@testing-library/react';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 
-function ListBooks() {
+function ListBooks({moody, renderedBooks}) {
 
-  const [renderedBooks, setRenderedBooks] = useState([])
-
-  const getBooks = async() => {
-    try {
-      const response = await fetch("http://localhost:5000/books");
-      const jsonData = await response.json();
-
-      setRenderedBooks(jsonData);
-    } catch (err) {
-      console.error(err.message);
-    }
-  }
-
-  useEffect(() => {
-    getBooks();
-  }, []);
+  
+    const moodBooks = renderedBooks.filter(book => book.mood.includes(moody))
+    const idList = moodBooks.map(book => book.book_id)
+    console.log("this is the id list", idList)
+    const randomId = idList[Math.floor(Math.random()*idList.length)];
+    const theChosenBook = renderedBooks.find(book => book.book_id === randomId);
+    console.log(theChosenBook)
+  
 
   return (
     <div>
-      {renderedBooks.filter(book => book.mood.includes("cheerful")).map(filteredBook => {
-        return (
-          <h2>{filteredBook.title}</h2>
-        )
-      })}
+      <h1>RANDOM BOOK! :)</h1>
+      <h2>{theChosenBook.title}</h2>
+      <h4>{theChosenBook.author}, {theChosenBook.year}</h4>
+      <p>{theChosenBook.description}</p>
     </div>
   )}
 
