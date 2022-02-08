@@ -31,12 +31,12 @@ app.post("/books", async(req, res) => {
 
 //get all unpleasant-energized books
 
-app.get("/fearful", async(req, res) => {
+app.get("/books", async(req, res) => {
   try {
 
-    const fearfulBooks = await pool.query("select * from books where 'fearful'=ANY(mood)")
+    const allBooks = await pool.query("select * from books")
 
-    res.json(fearfulBooks.rows);
+    res.json(allBooks.rows);
 
   } catch (err) {
     console.error(err.message);
