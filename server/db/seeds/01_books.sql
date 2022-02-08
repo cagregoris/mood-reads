@@ -50,7 +50,7 @@ VALUES
     '2012',
     'On a warm summer morning in North Carthage, Missouri, it is Nick and Amy Dunne’s fifth wedding anniversary. Presents are being wrapped and reservations are being made when Nick’s clever and beautiful wife disappears. Husband-of-the-Year Nick isn’t doing himself any favors with cringe-worthy daydreams about the slope and shape of his wife’s head, but passages from Amy''s diary reveal the alpha-girl perfectionist could have put anyone dangerously on edge. Under mounting pressure from the police and the media—as well as Amy’s fiercely doting parents—the town golden boy parades an endless series of lies, deceits, and inappropriate behavior. Nick is oddly evasive, and he’s definitely bitter—but is he really a killer?',
     ARRAY['unpleasant-energized'],
-    ARRAY['fearful', 'angry', 'ominous']
+    ARRAY['fearful', 'angry']
   ),
   (
     'The Light Between Oceans',
@@ -88,7 +88,7 @@ VALUES
     'Rachel takes the same commuter train every morning and night. Every day she rattles down the track, flashes past a stretch of cozy suburban homes, and stops at the signal that allows her to daily watch the same couple breakfasting on their deck. She''s even started to feel like she knows them. Jess and Jason, she calls them. Their life--as she sees it--is perfect. Not unlike the life she recently lost.
     And then she sees something shocking. It''s only a minute until the train moves on, but it''s enough. Now everything''s changed. Unable to keep it to herself, Rachel goes to the police. But is she really as unreliable as they say? Soon she is deeply entangled not only in the investigation but in the lives of everyone involved. Has she done more harm than good?',
     ARRAY['unpleasant-energized'],
-    ARRAY['fearful', 'ominous']
+    ARRAY['fearful']
   ),
   (
     'All the Light We Cannot See',
@@ -97,7 +97,7 @@ VALUES
     'Marie-Laure lives in Paris near the Museum of Natural History, where her father works. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great uncle lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel.
     In a mining town in Germany, Werner Pfennig, an orphan, grows up with his younger sister, enchanted by a crude radio they find that brings them news and stories from places they have never seen or imagined. Werner becomes an expert at building and fixing these crucial new instruments and is enlisted to use his talent to track down the resistance. Deftly interweaving the lives of Marie-Laure and Werner, Doerr illuminates the ways, against all odds, people try to be good to one another. ',
     ARRAY['unpleasant-calm'],
-    ARRAY['sad', 'reflective']
+    ARRAY['sad']
   ),
   (
     'The Whistling Season',
