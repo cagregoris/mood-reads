@@ -9,7 +9,7 @@ function ListMoods({ handleSubmit, category, moodsObj, setMoody }) {
       <Nav />
       <div className="page--div">
           <Link to="/categories"><BackButton/></Link>
-        <div className="intro--container">
+        <div className="intro--container categories--container">
           <span id="mood-span">STEP 2 - {category}</span>
           <h1>I'm Feeling...</h1>
           <form className="categories--form" onSubmit={handleSubmit}>

@@ -13,6 +13,7 @@ import './styles/ListCategories.css'
 import './styles/ListMoods.css'
 import './styles/ListBooks.css'
 import './styles/Nav.css'
+import './styles/About.css'
 
 import { 
   BrowserRouter as Router,

@@ -10,7 +10,7 @@
 .inner--div {
   width: 50%;
   text-align: center;
-  
+  padding-bottom: 100px;
 }
 
 .inner--div p {
@@ -39,4 +39,30 @@
   border: 5px solid #ff5851;
   background-color: #ff5851;
   box-shadow: #1c1c20 10px 10px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 912px) {
+  .inner--div {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 100px;
+  }
+
+  .inner--div h1 {
+    font-size: 40px;
+  }
+
+  .inner--div h4 {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .book-span {
+    font-size: 15px;
+  }
+
+  .inner--div p {
+    width: 90%;
+    margin: auto;
+  }
 }

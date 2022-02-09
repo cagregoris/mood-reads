@@ -2,10 +2,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-transform: uppercase;
   font-weight: 800;
   height: 40px;
+  width: 100%;
+}
+
+.left-side--nav {
+  padding-left: 20px;
 }
 
 .right-side--nav {
@@ -27,4 +33,29 @@
   color: #ff5851;
   text-shadow: #1c1c20 1px 1px;
   font-size: 17px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 750px) {
+  .left-side--nav {
+    display: none;
+  }
+
+  .nav--wrapper {
+    padding: 0;
+    display: flex;
+    width: 90%;
+  }
+
+  .right-side--nav {
+    padding: 0px;
+    padding-top: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+  }
+
+  .right-side--nav button {
+    font-size: 13px;
+  }
 }

@@ -7,7 +7,7 @@ function ListCategories({handleSubmit, setCategory}) {
   return (
     <div className="page--wrapper">
       <Nav/>
-      <div className="intro--container">
+      <div className="intro--container categories--container">
         <span id="cat-span">STEP ONE</span>
         <h1>I'm Feeling...</h1>
         <form className="categories--form" onSubmit={handleSubmit}>

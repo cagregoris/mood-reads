@@ -16,3 +16,12 @@
   color: #ff5851;
   box-shadow: #1c1c20 5px 5px;
 }
+
+@media only screen and (min-width: 280px) and (max-width: 500px) {
+  .b-back {
+    font-size: 13px;
+    width: 100px;
+    padding: 7px 0;
+    border: 3px solid #1c1c20;
+  }
+}
