@@ -6,6 +6,5 @@ CREATE TABLE books(
   year INTEGER,
   description TEXT NOT NULL,
   category TEXT[],
-  mood TEXT[],
-  image VARCHAR
+  mood TEXT[]
 );

@@ -3,7 +3,8 @@
 }
 
 .book-div {
-  min-height: 100vh;
+  height: auto;
+  padding-top: 50px;
 }
 
 .inner--div {
@@ -25,6 +26,17 @@
   font-size: 20px;
 }
 
-.image--div {
-  height: auto;
+.img-div {
+  max-width: 50%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.img-div img {
+  width: 100%;
+  height: auto; 
+  display: block;
+  border: 5px solid #ff5851;
+  background-color: #ff5851;
+  box-shadow: #1c1c20 10px 10px;
 }

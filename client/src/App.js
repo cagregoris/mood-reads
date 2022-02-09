@@ -5,12 +5,14 @@ import Intro from "./Components/Intro";
 import ListCategories from "./Components/ListCategories";
 import ListMoods from "./Components/ListMoods";
 import ListBooks from "./Components/ListBooks";
+import About from "./Components/About";
 
 // STYLESHEETS
 import './styles/Intro.css'
 import './styles/ListCategories.css'
 import './styles/ListMoods.css'
 import './styles/ListBooks.css'
+import './styles/Nav.css'
 
 import { 
   BrowserRouter as Router,
@@ -78,6 +80,7 @@ function App() {
         <Route path = '/categories' exact element={<ListCategories handleChange={handleChange} category={category} handleSubmit={handleSubmit} setCategory={setCategory} />} />
         <Route path = '/moods' exact element={ category ? <ListMoods handleSubmit={handleSubmit} category={category} moodsObj={moodsObj} moody={moody} handleMoodChange={handleMoodChange} setMoody={setMoody}/> : <Intro/>} />
         <Route path = '/books' exact element={ category ? <ListBooks moody={moody} renderedBooks={renderedBooks} /> : <Intro/>} />
+        <Route path = '/about' exact element={<About/>} />
       </Routes>
 
     </Router>
