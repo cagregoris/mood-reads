@@ -1,0 +1,30 @@
+.book-div h1{
+  font-size: 60px;
+}
+
+.book-div {
+  min-height: 100vh;
+}
+
+.inner--div {
+  width: 50%;
+  text-align: center;
+  
+}
+
+.inner--div p {
+  line-height: 1.6;
+  font-weight: 500;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-transform: none;
+}
+
+.book-span {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.image--div {
+  height: auto;
+}

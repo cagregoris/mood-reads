@@ -1,10 +1,16 @@
 import React, {useState, useEffect} from "react";
 
+// COMPONENTS
 import Intro from "./Components/Intro";
 import ListCategories from "./Components/ListCategories";
 import ListMoods from "./Components/ListMoods";
 import ListBooks from "./Components/ListBooks";
-import SinglePage from "./Components/SinglePage";
+
+// STYLESHEETS
+import './styles/Intro.css'
+import './styles/ListCategories.css'
+import './styles/ListMoods.css'
+import './styles/ListBooks.css'
 
 import { 
   BrowserRouter as Router,
@@ -16,10 +22,10 @@ import {
 function App() {
 
   const moodsObj = {
-    "UE" : ["fearful", "angry"],
-    "UC" : ["sad", "ominous"],
-    "PE" : ["cheerful", "humorous", "idylic", "adventurous"],
-    "PC" : ["hopeful", "whimsical", "reflective", "romantic"]
+    "Unpleasant-Energized" : ["fearful", "angry"],
+    "Unpleasant-Calm" : ["sad", "ominous"],
+    "Pleasant-Energized" : ["cheerful", "humorous", "idylic", "adventurous"],
+    "Pleasant-Calm" : ["hopeful", "whimsical", "reflective", "romantic"]
   } 
 
   const [renderedBooks, setRenderedBooks] = useState([]);
@@ -41,6 +47,13 @@ function App() {
     getBooks();
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(category)
+    console.log(moody)
+  }
+
   const handleChange = e => {
     const target = e.target;
     if (target.checked) {
@@ -55,26 +68,6 @@ function App() {
     }
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    console.log(category)
-    console.log(moody)
-  }
-
-  // const displayBook = function() {
-  //   const moodBooks = renderedBooks.filter(book => book.mood.includes(moody))
-  //   const idList = moodBooks.map(book => book.book_id)
-  //   console.log("this is the id list", idList)
-  //   const randomId = idList[Math.floor(Math.random()*idList.length)];
-  //   const theChosenBook = renderedBooks.find(book => book.book_id === randomId);
-  //   console.log("THE CHOSEN BOOK", theChosenBook)
-  //   let newArray = [];
-  //   newArray.push(theChosenBook.title, theChosenBook.author, theChosenBook.year, theChosenBook.description)
-
-  //   return newArray;
-    
-  // }
   
 
   return (
@@ -82,8 +75,8 @@ function App() {
     <Router >
       <Routes >
         <Route path = '/' exact element={<Intro/>} />
-        <Route path = '/categories' exact element={<ListCategories handleChange={handleChange} category={category} handleSubmit={handleSubmit} />} />
-        <Route path = '/moods' exact element={ category ? <ListMoods handleSubmit={handleSubmit} category={category} moodsObj={moodsObj} moody={moody} handleMoodChange={handleMoodChange} /> : <Intro/>} />
+        <Route path = '/categories' exact element={<ListCategories handleChange={handleChange} category={category} handleSubmit={handleSubmit} setCategory={setCategory} />} />
+        <Route path = '/moods' exact element={ category ? <ListMoods handleSubmit={handleSubmit} category={category} moodsObj={moodsObj} moody={moody} handleMoodChange={handleMoodChange} setMoody={setMoody}/> : <Intro/>} />
         <Route path = '/books' exact element={ category ? <ListBooks moody={moody} renderedBooks={renderedBooks} /> : <Intro/>} />
       </Routes>
 
